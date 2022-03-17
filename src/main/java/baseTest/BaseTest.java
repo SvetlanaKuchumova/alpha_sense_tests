@@ -8,7 +8,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.BeforeEach;
 import org.slf4j.bridge.SLF4JBridgeHandler;
 
 public class BaseTest {
@@ -21,11 +20,6 @@ public class BaseTest {
         System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tT %4$s %5$s%6$s%n");
         SLF4JBridgeHandler.removeHandlersForRootLogger();
         SLF4JBridgeHandler.install();
-    }
-
-    @BeforeEach
-    public void clean1() {
-        Selenide.closeWebDriver();
     }
 
     @AfterEach
