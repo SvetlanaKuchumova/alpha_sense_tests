@@ -1,6 +1,5 @@
 package baseTest;
 
-import config.WebConfig;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -10,7 +9,6 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.specification.ResponseSpecification;
-import org.aeonbits.owner.ConfigFactory;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeEach;
 

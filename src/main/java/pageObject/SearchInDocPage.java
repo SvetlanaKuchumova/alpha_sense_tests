@@ -50,7 +50,7 @@ public class SearchInDocPage {
 
     @Step ("Check Highlighted Statement")
     public void checkHighlightedStatement() {
-        String colorstatement = statement.getCssValue("background-color");
-        assertThat(colorstatement, equalTo(HIGHLIGHTEDCOLOR));
+        String colorStatement = statement.getCssValue("background-color");
+        assertThat(colorStatement, equalTo(HIGHLIGHTEDCOLOR));
     }
 }
