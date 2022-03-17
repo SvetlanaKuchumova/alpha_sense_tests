@@ -17,7 +17,7 @@ public class SearchTests extends BaseTest {
     @AllureId("120")
     public void searchTextUiTest() {
         searchInDocPage.openRcUrl(ALPHA_SENSE_DOC_UI.getValue());
-        searchInDocPage.enterTextInDocSearchField("AlphaSense");
+        searchInDocPage.enterTextInDocSearchField("AlphaSense"); // hidden element
         searchInDocPage.scrollToEndSearch();
         searchInDocPage.clickLastResultSearch();
         searchInDocPage.checkHighlightedStatement();
