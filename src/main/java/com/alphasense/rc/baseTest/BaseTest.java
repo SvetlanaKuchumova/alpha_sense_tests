@@ -1,9 +1,9 @@
-package baseTest;
+package com.alphasense.rc.baseTest;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import config.WebConfig;
+import com.alphasense.rc.config.WebConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -35,7 +35,8 @@ public class BaseTest {
     }
 
     private static WebConfig getConfig() {
-        if (System.getProperty("environment") == null) System.setProperty("environment", "prod");
+        if (System.getProperty("environment") == null)
+            System.setProperty("environment", "prod");
         return ConfigFactory.newInstance().create(WebConfig.class, System.getProperties());
     }
 }

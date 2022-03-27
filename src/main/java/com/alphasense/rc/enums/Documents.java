@@ -1,4 +1,4 @@
-package enums;
+package com.alphasense.rc.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

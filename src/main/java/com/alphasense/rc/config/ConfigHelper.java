@@ -1,4 +1,4 @@
-package config;
+package com.alphasense.rc.config;
 
 import org.aeonbits.owner.ConfigFactory;
 

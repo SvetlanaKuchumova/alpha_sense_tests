@@ -1,4 +1,4 @@
-package baseTest;
+package com.alphasense.rc.baseTest;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
