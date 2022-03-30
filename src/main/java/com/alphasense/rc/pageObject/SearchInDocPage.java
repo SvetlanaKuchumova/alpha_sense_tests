@@ -1,6 +1,5 @@
 package com.alphasense.rc.pageObject;
 
-import com.alphasense.rc.allure.AllureLogging;
 import com.codeborne.selenide.SelenideElement;
 import com.alphasense.rc.config.WebConfig;
 import io.qameta.allure.Step;
@@ -16,7 +15,6 @@ public class SearchInDocPage {
     static final WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     private static String rcUrl = config.rcUrl();
     private final String HIGHLIGHTEDCOLOR = "rgba(255, 190, 0, 1)";
-    AllureLogging allure = new AllureLogging();
 
     private SelenideElement emailField = $(By.id("Email"));
     private SelenideElement searchTextField = $(By.xpath("//textarea[@autocorrect='off']"));
@@ -59,8 +57,7 @@ public class SearchInDocPage {
     @Step("Check Highlighted Statement")
     public SearchInDocPage checkHighlightedStatement() {
         String colorStatement = statement.getCssValue("background-color");
-        assertThat(colorStatement, allure.logMatcherWithText("Checking background-color",
-                equalTo(HIGHLIGHTEDCOLOR)));
+        assertThat(colorStatement, equalTo(HIGHLIGHTEDCOLOR));
     return this;
     }
 }
